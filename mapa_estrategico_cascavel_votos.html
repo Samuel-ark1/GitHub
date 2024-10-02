@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_379187888e48462ec1652b17c8a05d1a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed; 
+    bottom: 50px; left: 50px; width: 250px; height: 120px; 
+    border:2px solid grey; z-index:9999; font-size:14px;
+    background-color:white;
+    ">
+    <b>Legenda</b><br>
+    <i class="fa fa-circle" style="color:green"></i> Ana Afif (PP)<br>
+    <i class="fa fa-circle" style="color:red"></i> Professor Cleiton (PT)<br>
+    <i class="fa fa-circle" style="color:lightblue"></i> Paulinha Dantas (PODEMOS)<br>
+</div>
+    
+            <div class="folium-map" id="map_379187888e48462ec1652b17c8a05d1a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_379187888e48462ec1652b17c8a05d1a = L.map(
+                "map_379187888e48462ec1652b17c8a05d1a",
+                {
+                    center: [-4.1294, -38.2401],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_59054bf9c111307131e9214006ed5979 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+            var circle_7d754b9df0e63b5b71924e361f3e90a6 = L.circle(
+                [-4.1294, -38.2401],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 750.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_61d21b3331d2b30881435d62b806a142 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed0c41ce308ba6b0e20fc34e0180da03 = $(`<div id="html_ed0c41ce308ba6b0e20fc34e0180da03" style="width: 100.0%; height: 100.0%;">Ana Afif: 1500 interações</div>`)[0];
+            popup_61d21b3331d2b30881435d62b806a142.setContent(html_ed0c41ce308ba6b0e20fc34e0180da03);
+        
+
+        circle_7d754b9df0e63b5b71924e361f3e90a6.bindPopup(popup_61d21b3331d2b30881435d62b806a142)
+        ;
+
+        
+    
+    
+            circle_7d754b9df0e63b5b71924e361f3e90a6.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_27e37d7d0efd52a02f6fd65939aad619 = L.circle(
+                [-4.132, -38.248],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 700.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_5422c5163d3ebab82eda306ef7ef6146 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_388d943c2b1ec05cd2abf272b72dcf3c = $(`<div id="html_388d943c2b1ec05cd2abf272b72dcf3c" style="width: 100.0%; height: 100.0%;">Ana Afif: 1400 interações</div>`)[0];
+            popup_5422c5163d3ebab82eda306ef7ef6146.setContent(html_388d943c2b1ec05cd2abf272b72dcf3c);
+        
+
+        circle_27e37d7d0efd52a02f6fd65939aad619.bindPopup(popup_5422c5163d3ebab82eda306ef7ef6146)
+        ;
+
+        
+    
+    
+            circle_27e37d7d0efd52a02f6fd65939aad619.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_33e22559eabdf816be49fdd65f70fbde = L.circle(
+                [-4.0771, -38.176],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 675.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_64236fb660989ba91e757b0e8855b644 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_573e042da55e1ca2767a60b638ce5e6d = $(`<div id="html_573e042da55e1ca2767a60b638ce5e6d" style="width: 100.0%; height: 100.0%;">Ana Afif: 1350 interações</div>`)[0];
+            popup_64236fb660989ba91e757b0e8855b644.setContent(html_573e042da55e1ca2767a60b638ce5e6d);
+        
+
+        circle_33e22559eabdf816be49fdd65f70fbde.bindPopup(popup_64236fb660989ba91e757b0e8855b644)
+        ;
+
+        
+    
+    
+            circle_33e22559eabdf816be49fdd65f70fbde.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_61dfc0667fbc061f119cf93eb4675627 = L.circle(
+                [-4.1089, -38.2022],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 625.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_0d798ca11ad15b18432f8d13b4600164 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6b98fc4af7bfd888bfb8c834b280dda7 = $(`<div id="html_6b98fc4af7bfd888bfb8c834b280dda7" style="width: 100.0%; height: 100.0%;">Ana Afif: 1250 interações</div>`)[0];
+            popup_0d798ca11ad15b18432f8d13b4600164.setContent(html_6b98fc4af7bfd888bfb8c834b280dda7);
+        
+
+        circle_61dfc0667fbc061f119cf93eb4675627.bindPopup(popup_0d798ca11ad15b18432f8d13b4600164)
+        ;
+
+        
+    
+    
+            circle_61dfc0667fbc061f119cf93eb4675627.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8bd75800f2f318e8a4edf1849b3080a0 = L.circle(
+                [-4.0885, -38.1685],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 650.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_de3ac4d62a14644a4b2c9634c68372dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0db0fe9d42e289187af1aeba98b547c9 = $(`<div id="html_0db0fe9d42e289187af1aeba98b547c9" style="width: 100.0%; height: 100.0%;">Ana Afif: 1300 interações</div>`)[0];
+            popup_de3ac4d62a14644a4b2c9634c68372dc.setContent(html_0db0fe9d42e289187af1aeba98b547c9);
+        
+
+        circle_8bd75800f2f318e8a4edf1849b3080a0.bindPopup(popup_de3ac4d62a14644a4b2c9634c68372dc)
+        ;
+
+        
+    
+    
+            circle_8bd75800f2f318e8a4edf1849b3080a0.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_5210ecd2867b654551b19adea13d5900 = L.circle(
+                [-4.0579, -38.1735],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 550.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_8de2f991a7e76d5b618a92d896ee9568 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ff3e23c52fcef19de7d3d72bf7fc496 = $(`<div id="html_9ff3e23c52fcef19de7d3d72bf7fc496" style="width: 100.0%; height: 100.0%;">Ana Afif: 1100 interações</div>`)[0];
+            popup_8de2f991a7e76d5b618a92d896ee9568.setContent(html_9ff3e23c52fcef19de7d3d72bf7fc496);
+        
+
+        circle_5210ecd2867b654551b19adea13d5900.bindPopup(popup_8de2f991a7e76d5b618a92d896ee9568)
+        ;
+
+        
+    
+    
+            circle_5210ecd2867b654551b19adea13d5900.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8b8215e21b8f437089dc273d1c7b16c0 = L.circle(
+                [-4.1111, -38.18],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 575.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_5da69ed31bcd23bb13e0c5d894dbf5b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73ec33b85814998b8497d766f03ca989 = $(`<div id="html_73ec33b85814998b8497d766f03ca989" style="width: 100.0%; height: 100.0%;">Ana Afif: 1150 interações</div>`)[0];
+            popup_5da69ed31bcd23bb13e0c5d894dbf5b2.setContent(html_73ec33b85814998b8497d766f03ca989);
+        
+
+        circle_8b8215e21b8f437089dc273d1c7b16c0.bindPopup(popup_5da69ed31bcd23bb13e0c5d894dbf5b2)
+        ;
+
+        
+    
+    
+            circle_8b8215e21b8f437089dc273d1c7b16c0.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_6f9b787536ca10a7f4e6972c7b91c34b = L.circle(
+                [-4.0544, -38.2308],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_0fa2cea24469b92725e9b511db90fd6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f0a99763e08acfc25a406c5ba969b82 = $(`<div id="html_5f0a99763e08acfc25a406c5ba969b82" style="width: 100.0%; height: 100.0%;">Ana Afif: 1000 interações</div>`)[0];
+            popup_0fa2cea24469b92725e9b511db90fd6e.setContent(html_5f0a99763e08acfc25a406c5ba969b82);
+        
+
+        circle_6f9b787536ca10a7f4e6972c7b91c34b.bindPopup(popup_0fa2cea24469b92725e9b511db90fd6e)
+        ;
+
+        
+    
+    
+            circle_6f9b787536ca10a7f4e6972c7b91c34b.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_74eb84fcb3b08717c452df7a4564e463 = L.circle(
+                [-4.078, -38.2067],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 450.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_0a508f2156d2024a8a5abdb495d4bd23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1784f741baddb8f46af817e1d06701f8 = $(`<div id="html_1784f741baddb8f46af817e1d06701f8" style="width: 100.0%; height: 100.0%;">Ana Afif: 900 interações</div>`)[0];
+            popup_0a508f2156d2024a8a5abdb495d4bd23.setContent(html_1784f741baddb8f46af817e1d06701f8);
+        
+
+        circle_74eb84fcb3b08717c452df7a4564e463.bindPopup(popup_0a508f2156d2024a8a5abdb495d4bd23)
+        ;
+
+        
+    
+    
+            circle_74eb84fcb3b08717c452df7a4564e463.bindTooltip(
+                `<div>
+                     Ana Afif
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_27a8942687968f3b48793373fb165411 = L.circle(
+                [-4.1294, -38.2401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 500.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_a43bf07ea5ab7ca91ab2f14d9ed0f787 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_376e3b5b22c1f6da3742aae638ff1a30 = $(`<div id="html_376e3b5b22c1f6da3742aae638ff1a30" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 1000 interações</div>`)[0];
+            popup_a43bf07ea5ab7ca91ab2f14d9ed0f787.setContent(html_376e3b5b22c1f6da3742aae638ff1a30);
+        
+
+        circle_27a8942687968f3b48793373fb165411.bindPopup(popup_a43bf07ea5ab7ca91ab2f14d9ed0f787)
+        ;
+
+        
+    
+    
+            circle_27a8942687968f3b48793373fb165411.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c2f668b43cc88e33dde59f1f2cbf4987 = L.circle(
+                [-4.132, -38.248],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 475.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_e531a17a848dbb90984cf7a35e0cbd57 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8baa05187617fc0ba71a21e358cfada5 = $(`<div id="html_8baa05187617fc0ba71a21e358cfada5" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 950 interações</div>`)[0];
+            popup_e531a17a848dbb90984cf7a35e0cbd57.setContent(html_8baa05187617fc0ba71a21e358cfada5);
+        
+
+        circle_c2f668b43cc88e33dde59f1f2cbf4987.bindPopup(popup_e531a17a848dbb90984cf7a35e0cbd57)
+        ;
+
+        
+    
+    
+            circle_c2f668b43cc88e33dde59f1f2cbf4987.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e126f65b186475e2d80fed64385e3dd6 = L.circle(
+                [-4.0771, -38.176],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 450.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_c6ee1ef7fdaced1b56d3e6e9c406c93f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14410adbcae95289f745f534b4575b7f = $(`<div id="html_14410adbcae95289f745f534b4575b7f" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 900 interações</div>`)[0];
+            popup_c6ee1ef7fdaced1b56d3e6e9c406c93f.setContent(html_14410adbcae95289f745f534b4575b7f);
+        
+
+        circle_e126f65b186475e2d80fed64385e3dd6.bindPopup(popup_c6ee1ef7fdaced1b56d3e6e9c406c93f)
+        ;
+
+        
+    
+    
+            circle_e126f65b186475e2d80fed64385e3dd6.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_52146a89ba9cf76da214f0f0478797cf = L.circle(
+                [-4.1089, -38.2022],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 425.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_c80b7e64481dd208ad3081811342c31c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cee9996a1c32624b152b90c88b06908a = $(`<div id="html_cee9996a1c32624b152b90c88b06908a" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 850 interações</div>`)[0];
+            popup_c80b7e64481dd208ad3081811342c31c.setContent(html_cee9996a1c32624b152b90c88b06908a);
+        
+
+        circle_52146a89ba9cf76da214f0f0478797cf.bindPopup(popup_c80b7e64481dd208ad3081811342c31c)
+        ;
+
+        
+    
+    
+            circle_52146a89ba9cf76da214f0f0478797cf.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b5a624e5ce28c64c45e19887963c9ec2 = L.circle(
+                [-4.0885, -38.1685],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 475.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_ed0e0434237426e69f32ce007cb40b87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_17ffdc2590744dddd296da591b721040 = $(`<div id="html_17ffdc2590744dddd296da591b721040" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 950 interações</div>`)[0];
+            popup_ed0e0434237426e69f32ce007cb40b87.setContent(html_17ffdc2590744dddd296da591b721040);
+        
+
+        circle_b5a624e5ce28c64c45e19887963c9ec2.bindPopup(popup_ed0e0434237426e69f32ce007cb40b87)
+        ;
+
+        
+    
+    
+            circle_b5a624e5ce28c64c45e19887963c9ec2.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b7690a0a2235df5c86787d706f4cf942 = L.circle(
+                [-4.0579, -38.1735],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_61650690c27180b2cc88ee0632d91488 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a7fd1dd9c20b3f3b50f10fe5b3033e25 = $(`<div id="html_a7fd1dd9c20b3f3b50f10fe5b3033e25" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 800 interações</div>`)[0];
+            popup_61650690c27180b2cc88ee0632d91488.setContent(html_a7fd1dd9c20b3f3b50f10fe5b3033e25);
+        
+
+        circle_b7690a0a2235df5c86787d706f4cf942.bindPopup(popup_61650690c27180b2cc88ee0632d91488)
+        ;
+
+        
+    
+    
+            circle_b7690a0a2235df5c86787d706f4cf942.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_b31c6b961dfa0e2918c484f741b7143a = L.circle(
+                [-4.1111, -38.18],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 425.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_a6d1518f70c8689e76b7e5864c1f6a97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c3d7ca5a3ac50f6b389a953af4bb555 = $(`<div id="html_9c3d7ca5a3ac50f6b389a953af4bb555" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 850 interações</div>`)[0];
+            popup_a6d1518f70c8689e76b7e5864c1f6a97.setContent(html_9c3d7ca5a3ac50f6b389a953af4bb555);
+        
+
+        circle_b31c6b961dfa0e2918c484f741b7143a.bindPopup(popup_a6d1518f70c8689e76b7e5864c1f6a97)
+        ;
+
+        
+    
+    
+            circle_b31c6b961dfa0e2918c484f741b7143a.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_a5bb788d9e835b19946eb44e929e98be = L.circle(
+                [-4.0544, -38.2308],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 375.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_0664bb5fcb5257571f2b57faa517f9fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ffccae9c396d8e21440815403d3acd6 = $(`<div id="html_2ffccae9c396d8e21440815403d3acd6" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 750 interações</div>`)[0];
+            popup_0664bb5fcb5257571f2b57faa517f9fd.setContent(html_2ffccae9c396d8e21440815403d3acd6);
+        
+
+        circle_a5bb788d9e835b19946eb44e929e98be.bindPopup(popup_0664bb5fcb5257571f2b57faa517f9fd)
+        ;
+
+        
+    
+    
+            circle_a5bb788d9e835b19946eb44e929e98be.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_c74ac49fce7fb32d166f40b493034f2d = L.circle(
+                [-4.078, -38.2067],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 350.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_b5d1fccff84488f4b284dd39fc109ce0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5cbc727ca6bd0319cd96fc931c68fe97 = $(`<div id="html_5cbc727ca6bd0319cd96fc931c68fe97" style="width: 100.0%; height: 100.0%;">Professor Cleiton: 700 interações</div>`)[0];
+            popup_b5d1fccff84488f4b284dd39fc109ce0.setContent(html_5cbc727ca6bd0319cd96fc931c68fe97);
+        
+
+        circle_c74ac49fce7fb32d166f40b493034f2d.bindPopup(popup_b5d1fccff84488f4b284dd39fc109ce0)
+        ;
+
+        
+    
+    
+            circle_c74ac49fce7fb32d166f40b493034f2d.bindTooltip(
+                `<div>
+                     Professor Cleiton
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_9426ec2af3444bdbb5442402d9c7cbf0 = L.circle(
+                [-4.1294, -38.2401],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_90a00c16c5f55304cf3a4a23ddc87b25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b385091444f35808621a759555837f5 = $(`<div id="html_2b385091444f35808621a759555837f5" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 200 interações</div>`)[0];
+            popup_90a00c16c5f55304cf3a4a23ddc87b25.setContent(html_2b385091444f35808621a759555837f5);
+        
+
+        circle_9426ec2af3444bdbb5442402d9c7cbf0.bindPopup(popup_90a00c16c5f55304cf3a4a23ddc87b25)
+        ;
+
+        
+    
+    
+            circle_9426ec2af3444bdbb5442402d9c7cbf0.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_88a421a8751d15a988b28d65a801bb5d = L.circle(
+                [-4.132, -38.248],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 75.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_da5500bc13593b1e80b0c35f3d7b6827 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e3b4dd30142a7414ae157fd37a4772d = $(`<div id="html_1e3b4dd30142a7414ae157fd37a4772d" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 150 interações</div>`)[0];
+            popup_da5500bc13593b1e80b0c35f3d7b6827.setContent(html_1e3b4dd30142a7414ae157fd37a4772d);
+        
+
+        circle_88a421a8751d15a988b28d65a801bb5d.bindPopup(popup_da5500bc13593b1e80b0c35f3d7b6827)
+        ;
+
+        
+    
+    
+            circle_88a421a8751d15a988b28d65a801bb5d.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_2529dd815559acef696d3dab928248ec = L.circle(
+                [-4.0771, -38.176],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_9c31df66b318ae6362efd526cc589e24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e32ef6b38bccd867634c4846b8a8637 = $(`<div id="html_6e32ef6b38bccd867634c4846b8a8637" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 100 interações</div>`)[0];
+            popup_9c31df66b318ae6362efd526cc589e24.setContent(html_6e32ef6b38bccd867634c4846b8a8637);
+        
+
+        circle_2529dd815559acef696d3dab928248ec.bindPopup(popup_9c31df66b318ae6362efd526cc589e24)
+        ;
+
+        
+    
+    
+            circle_2529dd815559acef696d3dab928248ec.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_e372f91877b0cd2c3ec2bd7abad6649c = L.circle(
+                [-4.1089, -38.2022],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_68a15c4dfb48a38decd90cff1d82a7a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77bc0d66d1f42da4e70bc1ca32646d24 = $(`<div id="html_77bc0d66d1f42da4e70bc1ca32646d24" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 120 interações</div>`)[0];
+            popup_68a15c4dfb48a38decd90cff1d82a7a4.setContent(html_77bc0d66d1f42da4e70bc1ca32646d24);
+        
+
+        circle_e372f91877b0cd2c3ec2bd7abad6649c.bindPopup(popup_68a15c4dfb48a38decd90cff1d82a7a4)
+        ;
+
+        
+    
+    
+            circle_e372f91877b0cd2c3ec2bd7abad6649c.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_32efbe9d76fcef5de9003625e52733d4 = L.circle(
+                [-4.0885, -38.1685],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 55.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_e35cbf87209c099eb5d7bf6127f78dad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48801f9915a4f54f5777de4afdd04d27 = $(`<div id="html_48801f9915a4f54f5777de4afdd04d27" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 110 interações</div>`)[0];
+            popup_e35cbf87209c099eb5d7bf6127f78dad.setContent(html_48801f9915a4f54f5777de4afdd04d27);
+        
+
+        circle_32efbe9d76fcef5de9003625e52733d4.bindPopup(popup_e35cbf87209c099eb5d7bf6127f78dad)
+        ;
+
+        
+    
+    
+            circle_32efbe9d76fcef5de9003625e52733d4.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_1e105c6496ebb2026460e6756d290e19 = L.circle(
+                [-4.0579, -38.1735],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_d055890181947ddf81f7c98129ece183 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9255ed75e0a939f6daae11fa128f616d = $(`<div id="html_9255ed75e0a939f6daae11fa128f616d" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 90 interações</div>`)[0];
+            popup_d055890181947ddf81f7c98129ece183.setContent(html_9255ed75e0a939f6daae11fa128f616d);
+        
+
+        circle_1e105c6496ebb2026460e6756d290e19.bindPopup(popup_d055890181947ddf81f7c98129ece183)
+        ;
+
+        
+    
+    
+            circle_1e105c6496ebb2026460e6756d290e19.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_d05f9c440e6e39f8b150f07b6137eb21 = L.circle(
+                [-4.1111, -38.18],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_7637c00db43c4220bee22ba642f0913d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9169c9f38daac35134e47a59acd6404e = $(`<div id="html_9169c9f38daac35134e47a59acd6404e" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 80 interações</div>`)[0];
+            popup_7637c00db43c4220bee22ba642f0913d.setContent(html_9169c9f38daac35134e47a59acd6404e);
+        
+
+        circle_d05f9c440e6e39f8b150f07b6137eb21.bindPopup(popup_7637c00db43c4220bee22ba642f0913d)
+        ;
+
+        
+    
+    
+            circle_d05f9c440e6e39f8b150f07b6137eb21.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_3f066db13079a54a7d05d7250e00231b = L.circle(
+                [-4.0544, -38.2308],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_76426c72216c1d53d88bf9f7f8f94e90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_180c5e32186d62cc5adbc32400901f04 = $(`<div id="html_180c5e32186d62cc5adbc32400901f04" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 70 interações</div>`)[0];
+            popup_76426c72216c1d53d88bf9f7f8f94e90.setContent(html_180c5e32186d62cc5adbc32400901f04);
+        
+
+        circle_3f066db13079a54a7d05d7250e00231b.bindPopup(popup_76426c72216c1d53d88bf9f7f8f94e90)
+        ;
+
+        
+    
+    
+            circle_3f066db13079a54a7d05d7250e00231b.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_8a872979675b11348162df8a765063f1 = L.circle(
+                [-4.078, -38.2067],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_379187888e48462ec1652b17c8a05d1a);
+        
+    
+        var popup_66480e30f1207b21b9b3de74590d7986 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3f8092fbd403601384bc9fbfc44229b6 = $(`<div id="html_3f8092fbd403601384bc9fbfc44229b6" style="width: 100.0%; height: 100.0%;">Paulinha Dantas: 60 interações</div>`)[0];
+            popup_66480e30f1207b21b9b3de74590d7986.setContent(html_3f8092fbd403601384bc9fbfc44229b6);
+        
+
+        circle_8a872979675b11348162df8a765063f1.bindPopup(popup_66480e30f1207b21b9b3de74590d7986)
+        ;
+
+        
+    
+    
+            circle_8a872979675b11348162df8a765063f1.bindTooltip(
+                `<div>
+                     Paulinha Dantas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
